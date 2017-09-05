@@ -1,0 +1,12 @@
+<h1>Your tests</h1>
+<p>
+  <ol>
+    <% if tests.present? %>
+      <% tests.each do |user_test| %>
+        <li><h3><%= link_to(user_test, user_test_path(user_test.id)) %></h3></li>
+      <% end %>
+    <% else %>
+      Nothing tests...
+    <% end %>
+  </ol>
+</p>

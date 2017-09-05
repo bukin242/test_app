@@ -1,0 +1,12 @@
+<h1>Your courses</h1>
+<p>
+  <ul>
+  <% if courses.present? %>
+    <% courses.each do |user_course| %>
+      <li><h3><%= link_to(user_course, user_course_path(user_course.id)) %></h3></li>
+    <% end %>
+  <% else %>
+    Nothing courses...
+  <% end %>
+  </ul>
+</p>

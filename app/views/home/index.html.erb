@@ -1,0 +1,10 @@
+<table border="1">
+  <tr>
+    <td>
+        <%= render 'layouts/courses', courses: current_user.courses %>
+    </td>
+    <td>
+        <%= render 'layouts/tests', tests: current_user.tests %>
+    </td>
+  </tr>
+</table>
