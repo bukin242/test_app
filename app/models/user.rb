@@ -27,10 +27,12 @@ class User < ApplicationRecord
   end
 
   def tests
-    user_events.where(event_type: 'UserTest').map(&:event)
+    event_ids = user_events.where(event_type: 'UserTest').map(&:event_id)
+    UserTest.where(id: event_ids)
   end
 
   def courses
-    user_events.where(event_type: 'UserCourse').map(&:event)
+    event_ids = user_events.where(event_type: 'UserCourse').map(&:event_id)
+    UserCourse.where(id: event_ids)
   end
 end

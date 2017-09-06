@@ -11,10 +11,9 @@ ActiveAdmin.register UserCourse do
      f.inputs "Course detail" do
        f.input :name
        f.input :description
-       f.input :video, as: :file
      end
      f.actions
    end
 
-  permit_params :name, :description, :video
+  permit_params :name, :description
 end

@@ -3,7 +3,6 @@ class CreateUserCourses < ActiveRecord::Migration[5.1]
     create_table :user_courses do |t|
       t.string :name
       t.text :description
-      t.binary :video
       t.timestamps
     end
   end

@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20170825170254) do
   create_table "user_courses", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.binary "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
